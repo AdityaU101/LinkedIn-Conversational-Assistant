@@ -1,0 +1,45 @@
+# LinkedIn Assistant — Neo4j + FastAPI backend + Streamlit frontend.
+#   docker compose up -d neo4j            # graph database only (local development)
+#   docker compose up --build             # everything
+# Ollama runs on the host (see README); containers reach it via host.docker.internal.
+services:
+  neo4j:
+    image: neo4j:5.26-community
+    container_name: la-neo4j
+    ports: ["7474:7474", "7687:7687"]
+    environment:
+      NEO4J_AUTH: ${NEO4J_USERNAME:-neo4j}/${NEO4J_PASSWORD:-change-me-please}
+      NEO4J_server_memory_heap_max__size: 1G
+      NEO4J_server_memory_pagecache_size: 512M
+    volumes:
+      - neo4j_data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q -O /dev/null http://localhost:7474 || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 20
+
+  backend:
+    build: {context: ., dockerfile: backend/Dockerfile}
+    container_name: la-backend
+    env_file: [.env]
+    environment:
+      NEO4J_URI: bolt://neo4j:7687
+      OLLAMA_BASE_URL: ${OLLAMA_BASE_URL_DOCKER:-http://host.docker.internal:11434}
+      EMBEDDING_DEVICE: cpu
+    ports: ["8000:8000"]
+    volumes:
+      - ./Data:/app/Data
+    depends_on:
+      neo4j: {condition: service_healthy}
+
+  frontend:
+    build: {context: ., dockerfile: frontend/Dockerfile}
+    container_name: la-frontend
+    environment:
+      BACKEND_URL: http://backend:8000
+    ports: ["8501:8501"]
+    depends_on: [backend]
+
+volumes:
+  neo4j_data:

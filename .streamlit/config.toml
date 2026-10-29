@@ -1,0 +1,16 @@
+[theme]
+primaryColor = "#0a66c2"
+backgroundColor = "#ffffff"
+secondaryBackgroundColor = "#f3f6f9"
+textColor = "#1d2226"
+font = "sans serif"
+
+[server]
+maxUploadSize = 5
+
+[browser]
+gatherUsageStats = false
+
+[client]
+# no Deploy button or developer menu: the app is shown to end users
+toolbarMode = "minimal"

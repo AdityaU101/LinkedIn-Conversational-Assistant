@@ -1,0 +1,50 @@
+/* Light-touch styling: cards and tighter metrics. Streamlit's theme handles colours. */
+div[data-testid="stMetric"] {
+  background: var(--secondary-background-color);
+  border-radius: 10px;
+  padding: 10px 14px;
+}
+div[data-testid="stVerticalBlockBorderWrapper"] { border-radius: 12px; }
+/* clear Streamlit's fixed header, so the logo above each page title is not clipped */
+.block-container { padding-top: 4rem; }
+
+/* ---- Dashboard bento grid (tiles are st.container(key="bento-…")) ---- */
+div[class*="st-key-bento-"] { border-radius: 18px; background: #ffffff; box-shadow: 0 1px 2px rgba(16, 24, 40, .05); }
+div[class*="st-key-bento-"] h3 { font-size: 1.15rem; padding-top: 0; }
+div.st-key-bento-hero { background: #0a66c2; border-color: #0a66c2; }
+.om-hero { color: #ffffff; padding: .4rem .2rem; }
+.om-hero-label { font-size: .95rem; opacity: .9; }
+.om-hero-value { font-size: 4.6rem; font-weight: 700; line-height: 1.15; margin: .9rem 0 .6rem; }
+.om-hero-note { font-size: .86rem; opacity: .9; line-height: 1.45; }
+.om-stat-label { font-size: .82rem; color: #667085; }
+.om-stat-value { font-size: 1.75rem; font-weight: 700; line-height: 1.25; color: #1d2226; }
+.om-stat-note { font-size: .78rem; color: #667085; }
+.om-row { display: flex; align-items: center; gap: .7rem; padding: .42rem 0; border-bottom: 1px solid #eef2f7;
+          font-size: .9rem; }
+.om-row:last-child { border-bottom: 0; }
+.om-row-main { flex: 1; min-width: 0; line-height: 1.35; }
+.om-row small, .om-when { color: #667085; white-space: nowrap; }
+.om-rank { width: 1.7rem; height: 1.7rem; border-radius: 50%; background: #e8f1fd; color: #1849a9; font-weight: 700;
+           font-size: .82rem; display: inline-flex; align-items: center; justify-content: center; flex: none; }
+
+/* ---- Job Recommendations: compact cards and removable filter chips ---- */
+.om-job-head { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; flex-wrap: wrap; }
+.om-job-title { font-size: 1.12rem; font-weight: 700; color: #1d2226; }
+.om-job-meta { color: #667085; font-size: .86rem; margin: .1rem 0 .45rem; }
+.om-job-skills { margin-top: .15rem; line-height: 1.9; display: flex; align-items: baseline; }
+.om-job-label { flex: none; width: 4.6rem; color: #667085; font-size: .8rem; }
+.om-job-none { color: #98a2b3; font-size: .82rem; }
+div.st-key-filter-chips button { border-radius: 999px; padding: 0 .75rem; min-height: 1.9rem; font-size: .82rem;
+                                 background: #e8f1fd; border-color: #c7dcf8; color: #1849a9; }
+
+/* ---- Research Dashboard: experiment status table with full, wrapped notes ---- */
+table.om-table { width: 100%; border-collapse: collapse; font-size: .9rem; margin-bottom: 1rem; }
+table.om-table th { text-align: left; font-weight: 600; color: #667085; font-size: .8rem; padding: .4rem .7rem;
+                    border-bottom: 1px solid #d0d5dd; }
+table.om-table td { padding: .55rem .7rem; border-bottom: 1px solid #eef2f7; vertical-align: top; }
+table.om-table td small { color: #667085; }
+table.om-table td.om-note { color: #475467; line-height: 1.45; }
+table.om-table th:nth-child(1) { width: 3%; }
+table.om-table th:nth-child(2) { width: 33%; }
+table.om-table th:nth-child(3) { width: 17%; }
+table.om-table, table.om-table th, table.om-table td { border-left: 0; border-right: 0; border-top: 0; }

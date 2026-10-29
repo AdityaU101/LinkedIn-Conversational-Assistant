@@ -1,0 +1,78 @@
+# LinkedIn Assistant — application settings.
+# Environment variables (see .env.example) hold secrets; this file holds
+# non-secret configuration. Select a mode with APP_MODE=development|full.
+
+mode: development
+
+modes:
+  development:
+    max_jobs: 5000            # per-source caps are derived from this
+    max_resume_corpus: 2000
+    max_kaggle_resumes: 2484
+    embedding_batch_size: 64
+  full:
+    max_jobs: null            # null = all available data
+    max_resume_corpus: null
+    max_kaggle_resumes: null
+    embedding_batch_size: 128
+
+paths:
+  data_dir: Data
+  raw: Data/raw
+  processed: Data/processed
+  normalized: Data/normalized
+  annotations: Data/annotations
+  splits: Data/splits
+  indexes: Data/indexes
+  manifests: Data/manifests
+  results: Data/results
+  cache: Data/cache
+  uploads: Data/uploads
+  sqlite: Data/app.db
+
+ingestion:
+  chunk_size: 20000
+  # Sources indexed for recommendation. linkedin_insights has no job
+  # descriptions, so it is ingested for analytics/dedup but not indexed.
+  index_sources: [linkedin_kaggle, datastax_linkedin, remoteok, adzuna]
+  # Share of max_jobs reserved per source in development mode.
+  source_quota:
+    linkedin_kaggle: 0.70
+    datastax_linkedin: 0.25
+    remoteok: 0.05
+  minhash:
+    num_perm: 64
+    threshold: 0.85
+    shingle_size: 5
+
+parsing:
+  chunk_words: 350            # within the 200–500 word target
+  chunk_overlap: 0.10
+  use_llm: auto               # auto = use LLM extractor when a local model is reachable
+  max_upload_mb: 5
+
+normalization:
+  tfidf_threshold: 0.86
+  embedding_threshold: 0.82
+  embedding_margin: 0.03      # top-1 must beat top-2 by this margin, else tie-break/abstain
+  llm_tiebreak: false
+
+matching:
+  retrieve_k: 200
+  rerank_k: 20
+  final_k: 10
+  rrf_k: 60
+  mmr_lambda: 0.7
+  embedding_model: sentence-transformers/all-MiniLM-L6-v2
+  cross_encoder_model: cross-encoder/ms-marco-MiniLM-L-6-v2
+  use_cross_encoder: true
+  use_dense: true
+
+graph:
+  backend: auto               # auto | neo4j | memory
+  related_skill_min_jaccard: 0.30
+  related_skill_top_k: 8
+  typical_skill_min_importance: 3.5
+
+privacy:
+  allow_remote_pii: false     # resume text is never sent to hosted LLMs unless true

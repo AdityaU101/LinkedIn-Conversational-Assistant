@@ -1,0 +1,7 @@
+# Optional QLoRA training (CUDA GPU required for 4-bit). Not needed by the application.
+-r requirements.txt
+peft>=0.13
+trl>=0.12
+bitsandbytes>=0.44
+datasets>=3.0
+accelerate>=1.0

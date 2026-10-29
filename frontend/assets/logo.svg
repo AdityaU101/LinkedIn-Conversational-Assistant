@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 236 56" role="img" aria-label="OpenMatch">
+  <rect width="236" height="56" rx="10" fill="#0a66c2"/>
+  <!-- person working at a desktop -->
+  <g fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="30" y="14" width="22" height="15" rx="2"/>
+    <path d="M41 29v6M35 35h12"/>
+    <path d="M9 42h46"/>
+    <path d="M24 31l6 3"/>
+  </g>
+  <g fill="#ffffff">
+    <circle cx="18" cy="17" r="5.5"/>
+    <path d="M10 42v-9a8 8 0 0 1 16 0v9z"/>
+  </g>
+  <text x="66" y="37" fill="#ffffff" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="27"
+        font-weight="700" letter-spacing="-0.5">OpenMatch</text>
+</svg>

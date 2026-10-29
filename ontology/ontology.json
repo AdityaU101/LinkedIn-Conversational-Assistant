@@ -1,0 +1,40 @@
+{
+  "name": "LinkedIn Assistant job-matching ontology",
+  "version": "1.0",
+  "nodes": {
+    "Candidate": {"key": "id", "properties": ["id", "name_hidden", "source_document", "total_experience_years"]},
+    "JobPosting": {"key": "id", "properties": ["id", "title", "source", "source_url", "posting_date", "work_mode", "seniority"]},
+    "Company": {"key": "id", "properties": ["id", "name"]},
+    "Occupation": {"key": "id", "properties": ["id", "code", "title", "major_group"]},
+    "Skill": {"key": "id", "properties": ["id", "name", "taxonomy", "skill_type", "hot_technology"]},
+    "Requirement": {"key": "id", "properties": ["id", "kind", "importance", "text", "years", "education_level"]},
+    "Experience": {"key": "id", "properties": ["id", "title", "start_date", "end_date", "duration_months"]},
+    "Credential": {"key": "id", "properties": ["id", "name"]},
+    "Project": {"key": "id", "properties": ["id", "name"]},
+    "Education": {"key": "id", "properties": ["id", "degree", "level", "field", "institution"]},
+    "Location": {"key": "id", "properties": ["id", "name", "state", "country"]},
+    "Evidence": {"key": "id", "properties": ["id", "document_id", "text", "start", "end", "extractor", "extractor_version", "confidence"]}
+  },
+  "relations": {
+    "HAS_SKILL": {"from": ["Candidate"], "to": ["Skill"], "evidence_required": true},
+    "HELD": {"from": ["Candidate"], "to": ["Experience"], "evidence_required": true},
+    "USED": {"from": ["Experience", "Project"], "to": ["Skill"], "evidence_required": true},
+    "AT": {"from": ["Experience"], "to": ["Company"], "evidence_required": true},
+    "POSTED_BY": {"from": ["JobPosting"], "to": ["Company"], "evidence_required": false, "note": "source metadata field"},
+    "FOR_ROLE": {"from": ["JobPosting", "Experience"], "to": ["Occupation"], "evidence_required": false, "note": "normalisation output; method + confidence stored"},
+    "HAS_REQUIREMENT": {"from": ["JobPosting"], "to": ["Requirement"], "evidence_required": true},
+    "TARGETS": {"from": ["Requirement", "Candidate"], "to": ["Skill", "Occupation"], "evidence_required": false},
+    "RELATED_TO": {"from": ["Skill", "Occupation"], "to": ["Skill", "Occupation"], "evidence_required": false, "inferred": true},
+    "TYPICAL_FOR": {"from": ["Skill"], "to": ["Occupation"], "evidence_required": false, "note": "O*NET reference data"},
+    "HAS_CREDENTIAL": {"from": ["Candidate"], "to": ["Credential"], "evidence_required": true},
+    "HAS_EDUCATION": {"from": ["Candidate"], "to": ["Education"], "evidence_required": true},
+    "WORKED_ON": {"from": ["Candidate"], "to": ["Project"], "evidence_required": true},
+    "LOCATED_IN": {"from": ["JobPosting"], "to": ["Location"], "evidence_required": false},
+    "SUPPORTED_BY": {"from": ["Candidate", "Experience", "Requirement", "Credential", "Education", "Project"], "to": ["Evidence"], "evidence_required": false}
+  },
+  "rules": [
+    "Every non-inferred relation from an extracted fact carries evidence_ids that resolve to Evidence nodes.",
+    "Inferred relations carry inferred=true, method and confidence.",
+    "Skills are matched by canonical ID only; RELATED_TO never implies identity."
+  ]
+}

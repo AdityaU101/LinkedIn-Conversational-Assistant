@@ -1,0 +1,2281 @@
+{
+  "generated_at": "2026-10-09T01:19:10+00:00",
+  "datasets": [
+    {
+      "dataset_id": "linkedin_kaggle",
+      "name": "LinkedIn Job Postings 2023\u20132024 (Kaggle, arshkon/linkedin-job-postings)",
+      "source": "Kaggle download; original copies at ./postings.csv and ./archive/",
+      "location": "Data/raw/linkedin_jobs",
+      "files": [
+        {
+          "file": "Data/raw/linkedin_jobs/postings.csv",
+          "format": "csv",
+          "size_bytes": 516843769,
+          "rows": 123849,
+          "columns": [
+            "job_id",
+            "company_name",
+            "title",
+            "description",
+            "max_salary",
+            "pay_period",
+            "location",
+            "company_id",
+            "views",
+            "med_salary",
+            "min_salary",
+            "formatted_work_type",
+            "applies",
+            "original_listed_time",
+            "remote_allowed",
+            "job_posting_url",
+            "application_url",
+            "application_type",
+            "expiry",
+            "closed_time",
+            "formatted_experience_level",
+            "skills_desc",
+            "listed_time",
+            "posting_domain",
+            "sponsored",
+            "work_type",
+            "currency",
+            "compensation_type",
+            "normalized_salary",
+            "zip_code",
+            "fips"
+          ],
+          "dtypes": {
+            "job_id": "int64",
+            "company_name": "str",
+            "title": "str",
+            "description": "str",
+            "max_salary": "float64",
+            "pay_period": "str",
+            "location": "str",
+            "company_id": "float64",
+            "views": "float64",
+            "med_salary": "float64",
+            "min_salary": "float64",
+            "formatted_work_type": "str",
+            "applies": "float64",
+            "original_listed_time": "float64",
+            "remote_allowed": "float64",
+            "job_posting_url": "str",
+            "application_url": "str",
+            "application_type": "str",
+            "expiry": "float64",
+            "closed_time": "float64",
+            "formatted_experience_level": "str",
+            "skills_desc": "str",
+            "listed_time": "float64",
+            "posting_domain": "str",
+            "sponsored": "int64",
+            "work_type": "str",
+            "currency": "str",
+            "compensation_type": "str",
+            "normalized_salary": "float64",
+            "zip_code": "float64",
+            "fips": "float64"
+          },
+          "missing": {
+            "job_id": {
+              "null": 0,
+              "empty_string": 0,
+              "pct_missing": 0.0
+            },
+            "company_name": {
+              "null": 1719,
+              "empty_string": 0,
+              "pct_missing": 1.39
+            },
+            "title": {
+              "null": 0,
+              "empty_string": 0,
+              "pct_missing": 0.0
+            },
+            "description": {
+              "null": 7,
+              "empty_string": 0,
+              "pct_missing": 0.01
+            },
+            "max_salary": {
+              "null": 94056,
+              "empty_string": 0,
+              "pct_missing": 75.94
+            },
+            "pay_period": {
+              "null": 87776,
+              "empty_string": 0,
+              "pct_missing": 70.87
+            },
+            "location": {
+              "null": 0,
+              "empty_string": 0,
+              "pct_missing": 0.0
+            },
+            "company_id": {
+              "null": 1717,
+              "empty_string": 0,
+              "pct_missing": 1.39
+            },
+            "views": {
+              "null": 1689,
+              "empty_string": 0,
+              "pct_missing": 1.36
+            },
+            "med_salary": {
+              "null": 117569,
+              "empty_string": 0,
+              "pct_missing": 94.93
+            },
+            "min_salary": {
+              "null": 94056,
+              "empty_string": 0,
+              "pct_missing": 75.94
+            },
+            "formatted_work_type": {
+              "null": 0,
+              "empty_string": 0,
+              "pct_missing": 0.0
+            },
+            "applies": {
+              "null": 100529,
+              "empty_string": 0,
+              "pct_missing": 81.17
+            },
+            "original_listed_time": {
+              "null": 0,
+              "empty_string": 0,
+              "pct_missing": 0.0
+            },
+            "remote_allowed": {
+              "null": 108603,
+              "empty_string": 0,
+              "pct_missing": 87.69
+            },
+            "job_posting_url": {
+              "null": 0,
+              "empty_string": 0,
+              "pct_missing": 0.0
+            },
+            "application_url": {
+              "null": 36665,
+              "empty_string": 0,
+              "pct_missing": 29.6
+            },
+            "application_type": {
+              "null": 0,
+              "empty_string": 0,
+              "pct_missing": 0.0
+            },
+            "expiry": {
+              "null": 0,
+              "empty_string": 0,
+              "pct_missing": 0.0
+            },
+            "closed_time": {
+              "null": 122776,
+              "empty_string": 0,
+              "pct_missing": 99.13
+            },
+            "formatted_experience_level": {
+              "null": 29409,
+              "empty_string": 0,
+              "pct_missing": 23.75
+            },
+            "skills_desc": {
+              "null": 121410,
+              "empty_string": 0,
+              "pct_missing": 98.03
+            },
+            "listed_time": {
+              "null": 0,
+              "empty_string": 0,
+              "pct_missing": 0.0
+            },
+            "posting_domain": {
+              "null": 39968,
+              "empty_string": 0,
+              "pct_missing": 32.27
+            },
+            "sponsored": {
+              "null": 0,
+              "empty_string": 0,
+              "pct_missing": 0.0
+            },
+            "work_type": {
+              "null": 0,
+              "empty_string": 0,
+              "pct_missing": 0.0
+            },
+            "currency": {
+              "null": 87776,
+              "empty_string": 0,
+              "pct_missing": 70.87
+            },
+            "compensation_type": {
+              "null": 87776,
+              "empty_string": 0,
+              "pct_missing": 70.87
+            },
+            "normalized_salary": {
+              "null": 87776,
+              "empty_string": 0,
+              "pct_missing": 70.87
+            },
+            "zip_code": {
+              "null": 20872,
+              "empty_string": 0,
+              "pct_missing": 16.85
+            },
+            "fips": {
+              "null": 27415,
+              "empty_string": 0,
+              "pct_missing": 22.14
+            }
+          },
+          "id_columns": {
+            "job_id": {
+              "unique": 123849,
+              "duplicate_values": 0
+            }
+          },
+          "duplicate_full_rows": null
+        },
+        {
+          "file": "Data/raw/linkedin_jobs/companies/companies.csv",
+          "format": "csv",
+          "size_bytes": 23196843,
+          "rows": 24473,
+          "columns": [
+            "company_id",
+            "name",
+            "description",
+            "company_size",
+            "state",
+            "country",
+            "city",
+            "zip_code",
+            "address",
+            "url"
+          ],
+          "dtypes": {
+            "company_id": "int64",
+            "name": "str",
+            "description": "str",
+            "company_size": "float64",
+            "state": "str",
+            "country": "str",
+            "city": "str",
+            "zip_code": "str",
+            "address": "str",
+            "url": "str"
+          },
+          "missing": {
+            "company_id": {
+              "null": 0,
+              "empty_string": 0,
+              "pct_missing": 0.0
+            },
+            "name": {
+              "null": 1,
+              "empty_string": 0,
+              "pct_missing": 0.0
+            },
+            "description": {
+              "null": 297,
+              "empty_string": 0,
+              "pct_missing": 1.21
+            },
+            "company_size": {
+              "null": 2774,
+              "empty_string": 0,
+              "pct_missing": 11.33
+            },
+            "state": {
+              "null": 22,
+              "empty_string": 0,
+              "pct_missing": 0.09
+            },
+            "country": {
+              "null": 0,
+              "empty_string": 0,
+              "pct_missing": 0.0
+            },
+            "city": {
+              "null": 1,
+              "empty_string": 0,
+              "pct_missing": 0.0
+            },
+            "zip_code": {
+              "null": 28,
+              "empty_string": 0,
+              "pct_missing": 0.11
+            },
+            "address": {
+              "null": 22,
+              "empty_string": 0,
+              "pct_missing": 0.09
+            },
+            "url": {
+              "null": 0,
+              "empty_string": 0,
+              "pct_missing": 0.0
+            }
+          },
+          "id_columns": {
+            "company_id": {
+              "unique": 24473,
+              "duplicate_values": 0
+            }
+          },
+          "duplicate_full_rows": 0
+        },
+        {
+          "file": "Data/raw/linkedin_jobs/companies/company_industries.csv",
+          "format": "csv",
+          "size_bytes": 782404,
+          "rows": 24375,
+          "columns": [
+            "company_id",
+            "industry"
+          ],
+          "dtypes": {
+            "company_id": "int64",
+            "industry": "str"
+          },
+          "missing": {
+            "company_id": {
+              "null": 0,
+              "empty_string": 0,
+              "pct_missing": 0.0
+            },
+            "industry": {
+              "null": 0,
+              "empty_string": 0,
+              "pct_missing": 0.0
+            }
+          },
+          "id_columns": {},
+          "duplicate_full_rows": 0
+        },
+        {
+          "file": "Data/raw/linkedin_jobs/companies/company_specialities.csv",
+          "format": "csv",
+          "size_bytes": 4431117,
+          "rows": 169387,
+          "columns": [
+            "company_id",
+            "speciality"
+          ],
+          "dtypes": {
+            "company_id": "int64",
+            "speciality": "str"
+          },
+          "missing": {
+            "company_id": {
+              "null": 0,
+              "empty_string": 0,
+              "pct_missing": 0.0
+            },
+            "speciality": {
+              "null": 0,
+              "empty_string": 0,
+              "pct_missing": 0.0
+            }
+          },
+          "id_columns": {},
+          "duplicate_full_rows": 0
+        },
+        {
+          "file": "Data/raw/linkedin_jobs/companies/employee_counts.csv",
+          "format": "csv",
+          "size_bytes": 1044625,
+          "rows": 35787,
+          "columns": [
+            "company_id",
+            "employee_count",
+            "follower_count",
+            "time_recorded"
+          ],
+          "dtypes": {
+            "company_id": "int64",
+            "employee_count": "int64",
+            "follower_count": "int64",
+            "time_recorded": "int64"
+          },
+          "missing": {
+            "company_id": {
+              "null": 0,
+              "empty_string": 0,
+              "pct_missing": 0.0
+            },
+            "employee_count": {
+              "null": 0,
+              "empty_string": 0,
+              "pct_missing": 0.0
+            },
+            "follower_count": {
+              "null": 0,
+              "empty_string": 0,
+              "pct_missing": 0.0
+            },
+            "time_recorded": {
+              "null": 0,
+              "empty_string": 0,
+              "pct_missing": 0.0
+            }
+          },
+          "id_columns": {},
+          "duplicate_full_rows": 0
+        },
+        {
+          "file": "Data/raw/linkedin_jobs/jobs/benefits.csv",
+          "format": "csv",
+          "size_bytes": 1925812,
+          "rows": 67943,
+          "columns": [
+            "job_id",
+            "inferred",
+            "type"
+          ],
+          "dtypes": {
+            "job_id": "int64",
+            "inferred": "int64",
+            "type": "str"
+          },
+          "missing": {
+            "job_id": {
+              "null": 0,
+              "empty_string": 0,
+              "pct_missing": 0.0
+            },
+            "inferred": {
+              "null": 0,
+              "empty_string": 0,
+              "pct_missing": 0.0
+            },
+            "type": {
+              "null": 0,
+              "empty_string": 0,
+              "pct_missing": 0.0
+            }
+          },
+          "id_columns": {},
+          "duplicate_full_rows": 0
+        },
+        {
+          "file": "Data/raw/linkedin_jobs/jobs/job_industries.csv",
+          "format": "csv",
+          "size_bytes": 2506014,
+          "rows": 164808,
+          "columns": [
+            "job_id",
+            "industry_id"
+          ],
+          "dtypes": {
+            "job_id": "int64",
+            "industry_id": "int64"
+          },
+          "missing": {
+            "job_id": {
+              "null": 0,
+              "empty_string": 0,
+              "pct_missing": 0.0
+            },
+            "industry_id": {
+              "null": 0,
+              "empty_string": 0,
+              "pct_missing": 0.0
+            }
+          },
+          "id_columns": {},
+          "duplicate_full_rows": 0
+        },
+        {
+          "file": "Data/raw/linkedin_jobs/jobs/job_skills.csv",
+          "format": "csv",
+          "size_bytes": 3506651,
+          "rows": 213768,
+          "columns": [
+            "job_id",
+            "skill_abr"
+          ],
+          "dtypes": {
+            "job_id": "int64",
+            "skill_abr": "str"
+          },
+          "missing": {
+            "job_id": {
+              "null": 0,
+              "empty_string": 0,
+              "pct_missing": 0.0
+            },
+            "skill_abr": {
+              "null": 0,
+              "empty_string": 0,
+              "pct_missing": 0.0
+            }
+          },
+          "id_columns": {},
+          "duplicate_full_rows": 0
+        },
+        {
+          "file": "Data/raw/linkedin_jobs/jobs/salaries.csv",
+          "format": "csv",
+          "size_bytes": 2252264,
+          "rows": 40785,
+          "columns": [
+            "salary_id",
+            "job_id",
+            "max_salary",
+            "med_salary",
+            "min_salary",
+            "pay_period",
+            "currency",
+            "compensation_type"
+          ],
+          "dtypes": {
+            "salary_id": "int64",
+            "job_id": "int64",
+            "max_salary": "float64",
+            "med_salary": "float64",
+            "min_salary": "float64",
+            "pay_period": "str",
+            "currency": "str",
+            "compensation_type": "str"
+          },
+          "missing": {
+            "salary_id": {
+              "null": 0,
+              "empty_string": 0,
+              "pct_missing": 0.0
+            },
+            "job_id": {
+              "null": 0,
+              "empty_string": 0,
+              "pct_missing": 0.0
+            },
+            "max_salary": {
+              "null": 6838,
+              "empty_string": 0,
+              "pct_missing": 16.77
+            },
+            "med_salary": {
+              "null": 33947,
+              "empty_string": 0,
+              "pct_missing": 83.23
+            },
+            "min_salary": {
+              "null": 6838,
+              "empty_string": 0,
+              "pct_missing": 16.77
+            },
+            "pay_period": {
+              "null": 0,
+              "empty_string": 0,
+              "pct_missing": 0.0
+            },
+            "currency": {
+              "null": 0,
+              "empty_string": 0,
+              "pct_missing": 0.0
+            },
+            "compensation_type": {
+              "null": 0,
+              "empty_string": 0,
+              "pct_missing": 0.0
+            }
+          },
+          "id_columns": {
+            "salary_id": {
+              "unique": 40785,
+              "duplicate_values": 0
+            }
+          },
+          "duplicate_full_rows": 0
+        },
+        {
+          "file": "Data/raw/linkedin_jobs/mappings/industries.csv",
+          "format": "csv",
+          "size_bytes": 12734,
+          "rows": 422,
+          "columns": [
+            "industry_id",
+            "industry_name"
+          ],
+          "dtypes": {
+            "industry_id": "int64",
+            "industry_name": "str"
+          },
+          "missing": {
+            "industry_id": {
+              "null": 0,
+              "empty_string": 0,
+              "pct_missing": 0.0
+            },
+            "industry_name": {
+              "null": 34,
+              "empty_string": 0,
+              "pct_missing": 8.06
+            }
+          },
+          "id_columns": {
+            "industry_id": {
+              "unique": 422,
+              "duplicate_values": 0
+            }
+          },
+          "duplicate_full_rows": 0
+        },
+        {
+          "file": "Data/raw/linkedin_jobs/mappings/skills.csv",
+          "format": "csv",
+          "size_bytes": 679,
+          "rows": 35,
+          "columns": [
+            "skill_abr",
+            "skill_name"
+          ],
+          "dtypes": {
+            "skill_abr": "str",
+            "skill_name": "str"
+          },
+          "missing": {
+            "skill_abr": {
+              "null": 0,
+              "empty_string": 0,
+              "pct_missing": 0.0
+            },
+            "skill_name": {
+              "null": 0,
+              "empty_string": 0,
+              "pct_missing": 0.0
+            }
+          },
+          "id_columns": {
+            "skill_abr": {
+              "unique": 35,
+              "duplicate_values": 0
+            }
+          },
+          "duplicate_full_rows": 0
+        }
+      ],
+      "relationships": {
+        "jobs/benefits.csv.job_id -> postings.job_id": {
+          "rows": 67943,
+          "matched": 65393,
+          "pct": 96.25
+        },
+        "jobs/job_industries.csv.job_id -> postings.job_id": {
+          "rows": 164808,
+          "matched": 158963,
+          "pct": 96.45
+        },
+        "jobs/job_skills.csv.job_id -> postings.job_id": {
+          "rows": 213768,
+          "matched": 205778,
+          "pct": 96.26
+        },
+        "jobs/salaries.csv.job_id -> postings.job_id": {
+          "rows": 40785,
+          "matched": 36073,
+          "pct": 88.45
+        },
+        "companies/company_industries.csv.company_id -> companies.company_id": {
+          "rows": 24375,
+          "matched": 24375,
+          "pct": 100.0
+        },
+        "companies/company_specialities.csv.company_id -> companies.company_id": {
+          "rows": 169387,
+          "matched": 169387,
+          "pct": 100.0
+        },
+        "companies/employee_counts.csv.company_id -> companies.company_id": {
+          "rows": 35787,
+          "matched": 35787,
+          "pct": 100.0
+        },
+        "postings.company_id -> companies.company_id": {
+          "rows": 122132,
+          "matched": 122131,
+          "pct": 100.0
+        },
+        "job_skills.skill_abr -> mappings/skills.skill_abr": {
+          "rows": 213768,
+          "matched": 213768,
+          "pct": 100.0
+        },
+        "job_industries.industry_id -> mappings/industries.industry_id": {
+          "rows": 164808,
+          "matched": 164808,
+          "pct": 100.0
+        }
+      },
+      "date_range": {
+        "listed_time_min": "2024-03-24",
+        "listed_time_max": "2024-04-20"
+      },
+      "notes": [
+        "mappings/skills.csv holds 35 coarse LinkedIn job-function categories (e.g. 'Information Technology'), not fine-grained skills; they are stored as job function tags, not as normalized skills.",
+        "Byte-identical flat copies of the nested files also exist in Data/raw/linkedin_jobs (benefits.csv, companies.csv, company_industries.csv, company_specialities.csv, employee_counts.csv, industries.csv, job_industries.csv, job_skills.csv, salaries.csv, skills.csv); loaders read only the nested companies/ jobs/ mappings/ layout.",
+        "./postings.csv, ./archive/postings.csv and Data/raw/linkedin_jobs/postings.csv are identical (same size and MD5)."
+      ],
+      "temporal": "historical",
+      "usage": [
+        "retrieval corpus",
+        "job parsing",
+        "graph construction",
+        "ranking evaluation pool"
+      ],
+      "privacy": "Public job postings; contains company names and recruiter-written text, no candidate PII."
+    },
+    {
+      "dataset_id": "datastax_linkedin",
+      "name": "DataStax LinkedIn Job Listings",
+      "source": "Hugging Face (DataStax); original copy at ./clean_jobs.csv with ./gitattributes",
+      "location": "Data/raw/datastax_linkedin",
+      "files": [
+        {
+          "file": "Data/raw/datastax_linkedin/postings.csv",
+          "format": "csv",
+          "size_bytes": 4701233,
+          "rows": 1048,
+          "columns": [
+            "id",
+            "title",
+            "company",
+            "location",
+            "link",
+            "source",
+            "date_posted",
+            "work_type",
+            "employment_type",
+            "description"
+          ],
+          "dtypes": {
+            "id": "int64",
+            "title": "str",
+            "company": "str",
+            "location": "str",
+            "link": "str",
+            "source": "str",
+            "date_posted": "str",
+            "work_type": "float64",
+            "employment_type": "float64",
+            "description": "str"
+          },
+          "missing": {
+            "id": {
+              "null": 0,
+              "empty_string": 0,
+              "pct_missing": 0.0
+            },
+            "title": {
+              "null": 0,
+              "empty_string": 0,
+              "pct_missing": 0.0
+            },
+            "company": {
+              "null": 2,
+              "empty_string": 0,
+              "pct_missing": 0.19
+            },
+            "location": {
+              "null": 15,
+              "empty_string": 0,
+              "pct_missing": 1.43
+            },
+            "link": {
+              "null": 0,
+              "empty_string": 0,
+              "pct_missing": 0.0
+            },
+            "source": {
+              "null": 89,
+              "empty_string": 0,
+              "pct_missing": 8.49
+            },
+            "date_posted": {
+              "null": 23,
+              "empty_string": 0,
+              "pct_missing": 2.19
+            },
+            "work_type": {
+              "null": 1048,
+              "empty_string": 0,
+              "pct_missing": 100.0
+            },
+            "employment_type": {
+              "null": 1048,
+              "empty_string": 0,
+              "pct_missing": 100.0
+            },
+            "description": {
+              "null": 4,
+              "empty_string": 0,
+              "pct_missing": 0.38
+            }
+          },
+          "id_columns": {
+            "id": {
+              "unique": 1048,
+              "duplicate_values": 0
+            },
+            "link": {
+              "unique": 1048,
+              "duplicate_values": 0
+            }
+          },
+          "duplicate_full_rows": 0
+        }
+      ],
+      "value_counts": {
+        "source": {
+          "LinkedIn": 862,
+          "linkedin": 72,
+          "indeed": 25
+        }
+      },
+      "date_range": {
+        "date_posted_min": "2025-04-10",
+        "date_posted_max": "2025-06-11"
+      },
+      "notes": [
+        "Original filename in the workspace was clean_jobs.csv; stored here as postings.csv next to its .gitattributes, separate from the Kaggle postings.csv.",
+        "work_type and employment_type columns are entirely/mostly null \u2014 see missing statistics."
+      ],
+      "temporal": "historical",
+      "usage": [
+        "retrieval corpus",
+        "job parsing"
+      ],
+      "privacy": "Public job postings."
+    },
+    {
+      "dataset_id": "linkedin_insights",
+      "name": "LinkedIn Job Posts Insights (XLSX)",
+      "source": "Workspace file ./linkedin_job_posts_insights.xlsx",
+      "location": "Data/raw/linkedin_job_insights",
+      "files": [
+        {
+          "file": "Data/raw/linkedin_job_insights/linkedin_job_posts_insights.xlsx",
+          "format": "xlsx",
+          "size_bytes": 2011867,
+          "sheets": {
+            "Sheet1": {
+              "rows": 31597,
+              "columns": [
+                "job_title",
+                "company_name",
+                "location",
+                "hiring_status",
+                "date",
+                "seniority_level",
+                "job_function",
+                "employment_type",
+                "industry"
+              ],
+              "dtypes": {
+                "job_title": "str",
+                "company_name": "str",
+                "location": "str",
+                "hiring_status": "str",
+                "date": "datetime64[us]",
+                "seniority_level": "str",
+                "job_function": "str",
+                "employment_type": "str",
+                "industry": "str"
+              },
+              "missing": {
+                "job_title": 26,
+                "company_name": 940,
+                "location": 9,
+                "hiring_status": 0,
+                "date": 0,
+                "seniority_level": 1308,
+                "job_function": 1590,
+                "employment_type": 1591,
+                "industry": 2011
+              },
+              "duplicate_full_rows": 10693,
+              "value_counts": {
+                "seniority_level": {
+                  "Mid-Senior level": 8651,
+                  "Entry level": 7167,
+                  "\n            Mid-Senior level\n          ": 3777,
+                  "Not Applicable": 2113,
+                  "\n            Entry level\n          ": 2107,
+                  "Associate": 1475,
+                  "\n            Not Applicable\n          ": 1126,
+                  "\n            Associate\n          ": 946
+                },
+                "employment_type": {
+                  "Full-time": 18305,
+                  "\n          Full-time\n        ": 8257,
+                  "Contract": 1608,
+                  "Part-time": 573,
+                  "\n          Contract\n        ": 441,
+                  "\n        \n          Employment type\n        \n        \n          Full-time\n        \n      ": 286,
+                  "Temporary": 135,
+                  "Internship": 105
+                },
+                "hiring_status": {
+                  "Be an early applicant": 14423,
+                  "Actively Hiring": 6793,
+                  "\n         Actively Hiring\n      ": 5237,
+                  "\n         Be an early applicant\n      ": 4555,
+                  "Actively Hiring\n           +4\ufffdbenefits": 95,
+                  "\n         Actively Hiring\n           +4\u00a0benefits\n      ": 60,
+                  "Actively Hiring\n           +5\ufffdbenefits": 43,
+                  "Be an early applicant\n           +4\u00a0benefits": 39
+                }
+              },
+              "date_range": [
+                "2021-05-27 00:00:00",
+                "2023-04-29 00:00:00"
+              ]
+            }
+          }
+        }
+      ],
+      "notes": [
+        "No job description or URL column: usable for market analytics and dedup cross-reference, not for text retrieval. Excluded from the recommendation index by default."
+      ],
+      "temporal": "historical",
+      "usage": [
+        "analytics",
+        "cross-source dedup"
+      ],
+      "privacy": "Public posting metadata."
+    },
+    {
+      "dataset_id": "remoteok",
+      "name": "RemoteOK public job feed (https://remoteok.com/api)",
+      "source": "Downloaded API JSON",
+      "location": "Data/raw/remoteok",
+      "files": [
+        {
+          "file": "Data/raw/remoteok/remoteok_jobs.json",
+          "format": "json",
+          "size_bytes": 573287,
+          "records": 99,
+          "fields": {
+            "slug": 99,
+            "id": 99,
+            "epoch": 99,
+            "date": 99,
+            "company": 99,
+            "company_logo": 99,
+            "position": 99,
+            "tags": 99,
+            "description": 99,
+            "location": 99,
+            "apply_url": 99,
+            "verified": 6,
+            "salary_min": 99,
+            "salary_max": 99,
+            "logo": 99,
+            "url": 99,
+            "original": 11
+          },
+          "dates": [
+            "2026-07-30T16:00:20+00:00",
+            "2026-10-07T16:00:05+00:00"
+          ],
+          "duplicate_ids": 0
+        }
+      ],
+      "records": 99,
+      "terms": "API Terms of Service: Please link back (with follow, and without nofollow!) to the URL on Remote OK and mention Remote OK as a source, so we get traffic back from your site. If you do not we'll have to suspend API access.\n\nPlease don't use the Remote OK logo without written permission as it's a registered trademark, please DO use our name Remote OK though.",
+      "notes": [
+        "First array element is the API legal notice, not a job.",
+        "Some text fields are double-encoded UTF-8 (mojibake); the loader repairs them without altering raw files.",
+        "Attribution required: link back to the RemoteOK job URL and mention Remote OK as the source."
+      ],
+      "temporal": "live snapshot",
+      "usage": [
+        "retrieval corpus (current jobs)"
+      ],
+      "privacy": "Public postings."
+    },
+    {
+      "dataset_id": "adzuna",
+      "name": "Adzuna Jobs API snapshots",
+      "source": "https://api.adzuna.com (credentials via env)",
+      "location": "Data/raw/adzuna",
+      "files": [
+        {
+          "file": "Data/raw/adzuna/adzuna_us_20261009T011206_1.json",
+          "format": "json",
+          "size_bytes": 74783
+        },
+        {
+          "file": "Data/raw/adzuna/adzuna_us_20261009T011206_2.json",
+          "format": "json",
+          "size_bytes": 72633
+        },
+        {
+          "file": "Data/raw/adzuna/adzuna_us_20261009T011207_1.json",
+          "format": "json",
+          "size_bytes": 72293
+        },
+        {
+          "file": "Data/raw/adzuna/adzuna_us_20261009T011208_2.json",
+          "format": "json",
+          "size_bytes": 72256
+        },
+        {
+          "file": "Data/raw/adzuna/adzuna_us_20261009T011209_1.json",
+          "format": "json",
+          "size_bytes": 76461
+        },
+        {
+          "file": "Data/raw/adzuna/adzuna_us_20261009T011210_2.json",
+          "format": "json",
+          "size_bytes": 77705
+        },
+        {
+          "file": "Data/raw/adzuna/adzuna_us_20261009T011211_1.json",
+          "format": "json",
+          "size_bytes": 73215
+        },
+        {
+          "file": "Data/raw/adzuna/adzuna_us_20261009T011212_2.json",
+          "format": "json",
+          "size_bytes": 73711
+        },
+        {
+          "file": "Data/raw/adzuna/adzuna_us_20261009T011213_1.json",
+          "format": "json",
+          "size_bytes": 73178
+        },
+        {
+          "file": "Data/raw/adzuna/adzuna_us_20261009T011214_2.json",
+          "format": "json",
+          "size_bytes": 74534
+        },
+        {
+          "file": "Data/raw/adzuna/adzuna_us_20261009T011215_1.json",
+          "format": "json",
+          "size_bytes": 75326
+        },
+        {
+          "file": "Data/raw/adzuna/adzuna_us_20261009T011216_2.json",
+          "format": "json",
+          "size_bytes": 74995
+        },
+        {
+          "file": "Data/raw/adzuna/adzuna_us_20261009T011217_1.json",
+          "format": "json",
+          "size_bytes": 73875
+        },
+        {
+          "file": "Data/raw/adzuna/adzuna_us_20261009T011219_2.json",
+          "format": "json",
+          "size_bytes": 72997
+        },
+        {
+          "file": "Data/raw/adzuna/adzuna_us_20261009T011220_1.json",
+          "format": "json",
+          "size_bytes": 74702
+        },
+        {
+          "file": "Data/raw/adzuna/adzuna_us_20261009T011221_2.json",
+          "format": "json",
+          "size_bytes": 74455
+        }
+      ],
+      "records": 800,
+      "notes": [
+        "Raw API responses saved verbatim per fetch."
+      ],
+      "temporal": "live snapshot",
+      "usage": [
+        "retrieval corpus (current jobs)"
+      ],
+      "privacy": "Public postings."
+    },
+    {
+      "dataset_id": "kaggle_resumes",
+      "name": "Kaggle Resume Dataset (snehaanbhawal/resume-dataset)",
+      "source": "Workspace ./archive-2/",
+      "location": "Data/raw/resume_dataset",
+      "files": [
+        {
+          "file": "Data/raw/resume_dataset/Resume.csv",
+          "format": "csv",
+          "size_bytes": 56273235,
+          "rows": 2484,
+          "columns": [
+            "ID",
+            "Resume_str",
+            "Resume_html",
+            "Category"
+          ],
+          "dtypes": {
+            "ID": "int64",
+            "Resume_str": "str",
+            "Resume_html": "str",
+            "Category": "str"
+          },
+          "missing": {
+            "ID": {
+              "null": 0,
+              "empty_string": 0,
+              "pct_missing": 0.0
+            },
+            "Resume_str": {
+              "null": 0,
+              "empty_string": 1,
+              "pct_missing": 0.04
+            },
+            "Resume_html": {
+              "null": 0,
+              "empty_string": 0,
+              "pct_missing": 0.0
+            },
+            "Category": {
+              "null": 0,
+              "empty_string": 0,
+              "pct_missing": 0.0
+            }
+          },
+          "id_columns": {
+            "ID": {
+              "unique": 2484,
+              "duplicate_values": 0
+            }
+          },
+          "duplicate_full_rows": 0
+        },
+        {
+          "file": "Data/raw/resume_dataset/data",
+          "format": "pdf",
+          "count": 2484,
+          "size_bytes": 62016120
+        }
+      ],
+      "categories": {
+        "from_folders": [
+          "ACCOUNTANT",
+          "ADVOCATE",
+          "AGRICULTURE",
+          "APPAREL",
+          "ARTS",
+          "AUTOMOBILE",
+          "AVIATION",
+          "BANKING",
+          "BPO",
+          "BUSINESS-DEVELOPMENT",
+          "CHEF",
+          "CONSTRUCTION",
+          "CONSULTANT",
+          "DESIGNER",
+          "DIGITAL-MEDIA",
+          "ENGINEERING",
+          "FINANCE",
+          "FITNESS",
+          "HEALTHCARE",
+          "HR",
+          "INFORMATION-TECHNOLOGY",
+          "PUBLIC-RELATIONS",
+          "SALES",
+          "TEACHER"
+        ],
+        "count": 24,
+        "csv_distribution": {
+          "INFORMATION-TECHNOLOGY": 120,
+          "BUSINESS-DEVELOPMENT": 120,
+          "ADVOCATE": 118,
+          "CHEF": 118,
+          "FINANCE": 118,
+          "ENGINEERING": 118,
+          "ACCOUNTANT": 118,
+          "FITNESS": 117,
+          "AVIATION": 117,
+          "SALES": 116,
+          "HEALTHCARE": 115,
+          "CONSULTANT": 115,
+          "BANKING": 115,
+          "CONSTRUCTION": 112,
+          "PUBLIC-RELATIONS": 111,
+          "HR": 110,
+          "DESIGNER": 107,
+          "ARTS": 103,
+          "TEACHER": 102,
+          "APPAREL": 97,
+          "DIGITAL-MEDIA": 96,
+          "AGRICULTURE": 63,
+          "AUTOMOBILE": 36,
+          "BPO": 22
+        }
+      },
+      "relationships": {
+        "csv_ids_with_pdf": 2484,
+        "csv_rows": 2484,
+        "category_agreement_csv_vs_folder": 2484
+      },
+      "temporal": "historical",
+      "usage": [
+        "candidate pool for job->candidate matching",
+        "resume parsing evaluation pool",
+        "occupation-family classifier (real category labels)",
+        "annotation sampling"
+      ],
+      "privacy": "Resumes are anonymised by the publisher (names/companies replaced), but may still contain quasi-identifiers. Treated as sensitive: never sent to hosted LLMs by default."
+    },
+    {
+      "dataset_id": "resume_corpus",
+      "name": "resume_corpus (Jiechieu & Tsopze, 2020) \u2014 multi-labelled IT resumes",
+      "source": "Workspace ./resume_corpus-master/ (GitHub repository snapshot)",
+      "location": "Data/raw/resume_corpus",
+      "files": [
+        {
+          "file": "Data/raw/resume_corpus/README.md",
+          "format": "md",
+          "size_bytes": 1110
+        },
+        {
+          "file": "Data/raw/resume_corpus/normlized_classes.txt",
+          "format": "txt",
+          "size_bytes": 1223150
+        },
+        {
+          "file": "Data/raw/resume_corpus/resume_samples.zip",
+          "format": "zip",
+          "size_bytes": 63818300
+        },
+        {
+          "file": "Data/raw/resume_corpus/resumes_corpus.zip",
+          "format": "zip",
+          "size_bytes": 89368518
+        },
+        {
+          "file": "Data/raw/resume_corpus/skills_it.txt",
+          "format": "txt",
+          "size_bytes": 14775447
+        }
+      ],
+      "structure": {
+        "resume_samples.zip": {
+          "member": "resume_samples.txt",
+          "records": 29783,
+          "format": "id:::occupation labels (';'-separated):::resume text, records separated by '::::::' lines",
+          "distinct_raw_labels": 87890,
+          "top_raw_labels": {
+            "Python Developer": 4244,
+            "Javascript": 4006,
+            "Software Developer": 3242,
+            "Java Developer": 3111,
+            "Web Developer": 2818,
+            "Systems Administrator": 2714,
+            "Git": 2629,
+            "Active Directory": 2069,
+            "Network Administrator": 2060,
+            "System Administrator": 2046
+          }
+        },
+        "resumes_corpus.zip": {
+          "txt_files": 29783,
+          "lab_files": 29783,
+          "label_distribution": {
+            "Software_Developer": 15013,
+            "Web_Developer": 6594,
+            "Systems_Administrator": 5969,
+            "Project_manager": 4550,
+            "Network_Administrator": 4460,
+            "Front_End_Developer": 3977,
+            "Database_Administrator": 3299,
+            "Java_Developer": 3252,
+            "Security_Analyst": 3022,
+            "Python_Developer": 2836
+          }
+        },
+        "normlized_classes.txt": {
+          "lines": 19465,
+          "format": "raw occupation title:normalized class[,class]",
+          "normalized_classes": {
+            "Project_manager": 4603,
+            "Systems_Administrator": 3089,
+            "Software_Developer": 2718,
+            "Web_Developer": 2652,
+            "Database_Administrator": 2113,
+            "Network_Administrator": 2049,
+            "Security_Analyst": 2046,
+            "Front_End_Developer": 1632,
+            "Java_Developer": 1053,
+            "Python_Developer": 907
+          }
+        },
+        "skills_it.txt": {
+          "records": 2438,
+          "format": "Same id:::labels:::text layout as resume_samples.txt (it is a resume subset, not a skill list, despite the filename)"
+        }
+      },
+      "notes": [
+        "The README calls the archive 'resumes_sample.zip'; the actual file is resume_samples.zip.",
+        "The normalized classes file is spelled 'normlized_classes.txt' in the repository."
+      ],
+      "temporal": "historical",
+      "usage": [
+        "occupation-normalization evaluation (expert raw-title -> class mappings)",
+        "candidate pool",
+        "classical extraction training text"
+      ],
+      "privacy": "Real resumes scraped from public job boards; contain locations and employer names. Treated as sensitive."
+    },
+    {
+      "dataset_id": "onet",
+      "name": "O*NET Database O*NET 31.0 Database August 2026 Release -------------------",
+      "source": "Workspace ./db_31_0_csv/ (onetcenter.org, CC BY 4.0)",
+      "location": "Data/raw/onet",
+      "files": [
+        {
+          "file": "Data/raw/onet/abilities.csv",
+          "format": "csv",
+          "size_bytes": 12667583,
+          "rows": 94640,
+          "columns": [
+            "O*NET-SOC Code",
+            "Title",
+            "Element ID",
+            "Element Name",
+            "Scale ID",
+            "Scale Name",
+            "Data Value",
+            "N",
+            "Standard Error",
+            "Lower CI Bound",
+            "Upper CI Bound",
+            "Recommend Suppress",
+            "Not Relevant",
+            "Date",
+            "Domain Source"
+          ],
+          "missing_total": 47320,
+          "distinct_occupations": 910
+        },
+        {
+          "file": "Data/raw/onet/abilities_to_work_activities.csv",
+          "format": "csv",
+          "size_bytes": 31460,
+          "rows": 381,
+          "columns": [
+            "Abilities Element ID",
+            "Abilities Element Name",
+            "Work Activities Element ID",
+            "Work Activities Element Name"
+          ],
+          "missing_total": 0,
+          "distinct_occupations": null
+        },
+        {
+          "file": "Data/raw/onet/abilities_to_work_context.csv",
+          "format": "csv",
+          "size_bytes": 11797,
+          "rows": 139,
+          "columns": [
+            "Abilities Element ID",
+            "Abilities Element Name",
+            "Work Context Element ID",
+            "Work Context Element Name"
+          ],
+          "missing_total": 0,
+          "distinct_occupations": null
+        },
+        {
+          "file": "Data/raw/onet/career_interest_type_keywords.csv",
+          "format": "csv",
+          "size_bytes": 2706,
+          "rows": 75,
+          "columns": [
+            "Element ID",
+            "Element Name",
+            "Keyword",
+            "Keyword Type"
+          ],
+          "missing_total": 0,
+          "distinct_occupations": null
+        },
+        {
+          "file": "Data/raw/onet/career_interest_types.csv",
+          "format": "csv",
+          "size_bytes": 1136078,
+          "rows": 8307,
+          "columns": [
+            "O*NET-SOC Code",
+            "Title",
+            "Element ID",
+            "Element Name",
+            "Scale ID",
+            "Scale Name",
+            "Data Value",
+            "Date",
+            "Domain Source"
+          ],
+          "missing_total": 0,
+          "distinct_occupations": 923
+        },
+        {
+          "file": "Data/raw/onet/content_model_reference.csv",
+          "format": "csv",
+          "size_bytes": 235856,
+          "rows": 3006,
+          "columns": [
+            "Element ID",
+            "Element Name",
+            "Description"
+          ],
+          "missing_total": 2419,
+          "distinct_occupations": null
+        },
+        {
+          "file": "Data/raw/onet/education.csv",
+          "format": "csv",
+          "size_bytes": 1985398,
+          "rows": 11495,
+          "columns": [
+            "O*NET-SOC Code",
+            "Title",
+            "Element ID",
+            "Element Name",
+            "Scale ID",
+            "Scale Name",
+            "Category",
+            "Data Value",
+            "N",
+            "Standard Error",
+            "Lower CI Bound",
+            "Upper CI Bound",
+            "Recommend Suppress",
+            "Date",
+            "Domain Source"
+          ],
+          "missing_total": 22691,
+          "distinct_occupations": 901
+        },
+        {
+          "file": "Data/raw/onet/education_categories.csv",
+          "format": "csv",
+          "size_bytes": 3186,
+          "rows": 24,
+          "columns": [
+            "Element ID",
+            "Element Name",
+            "Scale ID",
+            "Scale Name",
+            "Category",
+            "Category Description"
+          ],
+          "missing_total": 0,
+          "distinct_occupations": null
+        },
+        {
+          "file": "Data/raw/onet/emerging_tasks.csv",
+          "format": "csv",
+          "size_bytes": 54335,
+          "rows": 338,
+          "columns": [
+            "O*NET-SOC Code",
+            "Title",
+            "Task",
+            "Category",
+            "Original Task ID",
+            "Original Task",
+            "Date",
+            "Domain Source"
+          ],
+          "missing_total": 584,
+          "distinct_occupations": 245
+        },
+        {
+          "file": "Data/raw/onet/essential_skills.csv",
+          "format": "csv",
+          "size_bytes": 2328135,
+          "rows": 18200,
+          "columns": [
+            "O*NET-SOC Code",
+            "Title",
+            "Element ID",
+            "Element Name",
+            "Scale ID",
+            "Scale Name",
+            "Data Value",
+            "N",
+            "Standard Error",
+            "Lower CI Bound",
+            "Upper CI Bound",
+            "Recommend Suppress",
+            "Not Relevant",
+            "Date",
+            "Domain Source"
+          ],
+          "missing_total": 9100,
+          "distinct_occupations": 910
+        },
+        {
+          "file": "Data/raw/onet/essential_skills_to_work_activities.csv",
+          "format": "csv",
+          "size_bytes": 8466,
+          "rows": 110,
+          "columns": [
+            "Essential Skills Element ID",
+            "Essential Skills Element Name",
+            "Work Activities Element ID",
+            "Work Activities Element Name"
+          ],
+          "missing_total": 0,
+          "distinct_occupations": null
+        },
+        {
+          "file": "Data/raw/onet/essential_skills_to_work_context.csv",
+          "format": "csv",
+          "size_bytes": 2891,
+          "rows": 39,
+          "columns": [
+            "Essential Skills Element ID",
+            "Essential Skills Element Name",
+            "Work Context Element ID",
+            "Work Context Element Name"
+          ],
+          "missing_total": 0,
+          "distinct_occupations": null
+        },
+        {
+          "file": "Data/raw/onet/gwas_to_iwas.csv",
+          "format": "csv",
+          "size_bytes": 35010,
+          "rows": 332,
+          "columns": [
+            "GWA Element ID",
+            "GWA Element Name",
+            "IWA Element ID",
+            "IWA Element Name"
+          ],
+          "missing_total": 0,
+          "distinct_occupations": null
+        },
+        {
+          "file": "Data/raw/onet/gwas_to_iwas_to_dwas.csv",
+          "format": "csv",
+          "size_bytes": 351780,
+          "rows": 2087,
+          "columns": [
+            "GWA Element ID",
+            "GWA Element Name",
+            "IWA Element ID",
+            "IWA Element Name",
+            "DWA Element ID",
+            "DWA Element Name"
+          ],
+          "missing_total": 0,
+          "distinct_occupations": null
+        },
+        {
+          "file": "Data/raw/onet/interests_illustrative_activities.csv",
+          "format": "csv",
+          "size_bytes": 14931,
+          "rows": 188,
+          "columns": [
+            "Element ID",
+            "Element Name",
+            "Interest Type",
+            "Activity"
+          ],
+          "missing_total": 0,
+          "distinct_occupations": null
+        },
+        {
+          "file": "Data/raw/onet/interests_illustrative_occupations.csv",
+          "format": "csv",
+          "size_bytes": 15034,
+          "rows": 186,
+          "columns": [
+            "Element ID",
+            "Element Name",
+            "Interest Type",
+            "O*NET-SOC Code",
+            "Title"
+          ],
+          "missing_total": 0,
+          "distinct_occupations": 164
+        },
+        {
+          "file": "Data/raw/onet/job_titles.csv",
+          "format": "csv",
+          "size_bytes": 4504432,
+          "rows": 54269,
+          "columns": [
+            "O*NET-SOC Code",
+            "Title",
+            "Job Title",
+            "Short Title",
+            "Source(s)"
+          ],
+          "missing_total": 49814,
+          "distinct_occupations": 1016
+        },
+        {
+          "file": "Data/raw/onet/job_zone_reference.csv",
+          "format": "csv",
+          "size_bytes": 3688,
+          "rows": 4,
+          "columns": [
+            "Job Zone",
+            "Name",
+            "Experience",
+            "Education",
+            "Job Training",
+            "Examples",
+            "SVP Range"
+          ],
+          "missing_total": 0,
+          "distinct_occupations": null
+        },
+        {
+          "file": "Data/raw/onet/job_zones.csv",
+          "format": "csv",
+          "size_bytes": 59908,
+          "rows": 923,
+          "columns": [
+            "O*NET-SOC Code",
+            "Title",
+            "Job Zone",
+            "Date",
+            "Domain Source"
+          ],
+          "missing_total": 0,
+          "distinct_occupations": 923
+        },
+        {
+          "file": "Data/raw/onet/knowledge.csv",
+          "format": "csv",
+          "size_bytes": 8013560,
+          "rows": 60060,
+          "columns": [
+            "O*NET-SOC Code",
+            "Title",
+            "Element ID",
+            "Element Name",
+            "Scale ID",
+            "Scale Name",
+            "Data Value",
+            "N",
+            "Standard Error",
+            "Lower CI Bound",
+            "Upper CI Bound",
+            "Recommend Suppress",
+            "Not Relevant",
+            "Date",
+            "Domain Source"
+          ],
+          "missing_total": 99416,
+          "distinct_occupations": 910
+        },
+        {
+          "file": "Data/raw/onet/level_scale_anchors.csv",
+          "format": "csv",
+          "size_bytes": 45629,
+          "rows": 483,
+          "columns": [
+            "Element ID",
+            "Element Name",
+            "Scale ID",
+            "Scale Name",
+            "Anchor Value",
+            "Anchor Description"
+          ],
+          "missing_total": 0,
+          "distinct_occupations": null
+        },
+        {
+          "file": "Data/raw/onet/occupation_data.csv",
+          "format": "csv",
+          "size_bytes": 268030,
+          "rows": 1016,
+          "columns": [
+            "O*NET-SOC Code",
+            "Title",
+            "Description"
+          ],
+          "missing_total": 0,
+          "distinct_occupations": 1016
+        },
+        {
+          "file": "Data/raw/onet/occupation_level_metadata.csv",
+          "format": "csv",
+          "size_bytes": 3780340,
+          "rows": 32280,
+          "columns": [
+            "O*NET-SOC Code",
+            "Title",
+            "Item",
+            "Response",
+            "N",
+            "Percent",
+            "Date"
+          ],
+          "missing_total": 9336,
+          "distinct_occupations": 902
+        },
+        {
+          "file": "Data/raw/onet/related_occupations.csv",
+          "format": "csv",
+          "size_bytes": 2051148,
+          "rows": 18460,
+          "columns": [
+            "O*NET-SOC Code",
+            "Title",
+            "Related O*NET-SOC Code",
+            "Related Title",
+            "Relatedness Tier",
+            "Index"
+          ],
+          "missing_total": 0,
+          "distinct_occupations": 923
+        },
+        {
+          "file": "Data/raw/onet/sample_of_reported_titles.csv",
+          "format": "csv",
+          "size_bytes": 601127,
+          "rows": 8189,
+          "columns": [
+            "O*NET-SOC Code",
+            "Title",
+            "Reported Job Title",
+            "Shown in My Next Move"
+          ],
+          "missing_total": 0,
+          "distinct_occupations": 915
+        },
+        {
+          "file": "Data/raw/onet/scales_reference.csv",
+          "format": "csv",
+          "size_bytes": 1006,
+          "rows": 33,
+          "columns": [
+            "Scale ID",
+            "Scale Name",
+            "Minimum",
+            "Maximum"
+          ],
+          "missing_total": 0,
+          "distinct_occupations": null
+        },
+        {
+          "file": "Data/raw/onet/software_skills.csv",
+          "format": "csv",
+          "size_bytes": 3557545,
+          "rows": 31821,
+          "columns": [
+            "O*NET-SOC Code",
+            "Title",
+            "Workplace Example",
+            "Element ID",
+            "Element Name",
+            "Hot Technology",
+            "In Demand"
+          ],
+          "missing_total": 0,
+          "distinct_occupations": 923
+        },
+        {
+          "file": "Data/raw/onet/specific_interest_areas.csv",
+          "format": "csv",
+          "size_bytes": 8712834,
+          "rows": 73062,
+          "columns": [
+            "O*NET-SOC Code",
+            "Title",
+            "Element ID",
+            "Element Name",
+            "Scale ID",
+            "Scale Name",
+            "Data Value",
+            "Date",
+            "Domain Source"
+          ],
+          "missing_total": 0,
+          "distinct_occupations": 891
+        },
+        {
+          "file": "Data/raw/onet/specific_interest_areas_to_career_interest_types.csv",
+          "format": "csv",
+          "size_bytes": 2489,
+          "rows": 53,
+          "columns": [
+            "Specific Interest Areas Element ID",
+            "Specific Interest Areas Element Name",
+            "Career Interest Types Element ID",
+            "Career Interest Types Element Name"
+          ],
+          "missing_total": 0,
+          "distinct_occupations": null
+        },
+        {
+          "file": "Data/raw/onet/survey_booklet_locations.csv",
+          "format": "csv",
+          "size_bytes": 13365,
+          "rows": 211,
+          "columns": [
+            "Element ID",
+            "Element Name",
+            "Survey Item Number",
+            "Scale ID",
+            "Scale Name"
+          ],
+          "missing_total": 0,
+          "distinct_occupations": null
+        },
+        {
+          "file": "Data/raw/onet/task_categories.csv",
+          "format": "csv",
+          "size_bytes": 446,
+          "rows": 7,
+          "columns": [
+            "Scale ID",
+            "Scale Name",
+            "Category",
+            "Category Description"
+          ],
+          "missing_total": 0,
+          "distinct_occupations": null
+        },
+        {
+          "file": "Data/raw/onet/task_ratings.csv",
+          "format": "csv",
+          "size_bytes": 39006755,
+          "rows": 165780,
+          "columns": [
+            "O*NET-SOC Code",
+            "Title",
+            "Task ID",
+            "Task",
+            "Scale ID",
+            "Scale Name",
+            "Category",
+            "Data Value",
+            "N",
+            "Standard Error",
+            "Lower CI Bound",
+            "Upper CI Bound",
+            "Recommend Suppress",
+            "Date",
+            "Domain Source"
+          ],
+          "missing_total": 254413,
+          "distinct_occupations": 911
+        },
+        {
+          "file": "Data/raw/onet/task_statements.csv",
+          "format": "csv",
+          "size_bytes": 3461375,
+          "rows": 18838,
+          "columns": [
+            "O*NET-SOC Code",
+            "Title",
+            "Task ID",
+            "Task",
+            "Task Type",
+            "Incumbents Responding",
+            "Date",
+            "Domain Source"
+          ],
+          "missing_total": 1005,
+          "distinct_occupations": 923
+        },
+        {
+          "file": "Data/raw/onet/tasks_to_dwas.csv",
+          "format": "csv",
+          "size_bytes": 5602660,
+          "rows": 24087,
+          "columns": [
+            "O*NET-SOC Code",
+            "Title",
+            "Task ID",
+            "Task",
+            "DWA Element ID",
+            "DWA Element Name",
+            "Date",
+            "Domain Source"
+          ],
+          "missing_total": 0,
+          "distinct_occupations": 923
+        },
+        {
+          "file": "Data/raw/onet/training_and_experience.csv",
+          "format": "csv",
+          "size_bytes": 4505025,
+          "rows": 26812,
+          "columns": [
+            "O*NET-SOC Code",
+            "Title",
+            "Element ID",
+            "Element Name",
+            "Scale ID",
+            "Scale Name",
+            "Category",
+            "Data Value",
+            "N",
+            "Standard Error",
+            "Lower CI Bound",
+            "Upper CI Bound",
+            "Recommend Suppress",
+            "Date",
+            "Domain Source"
+          ],
+          "missing_total": 41969,
+          "distinct_occupations": 901
+        },
+        {
+          "file": "Data/raw/onet/training_and_experience_categories.csv",
+          "format": "csv",
+          "size_bytes": 3431,
+          "rows": 29,
+          "columns": [
+            "Element ID",
+            "Element Name",
+            "Scale ID",
+            "Scale Name",
+            "Category",
+            "Category Description"
+          ],
+          "missing_total": 2,
+          "distinct_occupations": null
+        },
+        {
+          "file": "Data/raw/onet/transferable_skills.csv",
+          "format": "csv",
+          "size_bytes": 6081245,
+          "rows": 45500,
+          "columns": [
+            "O*NET-SOC Code",
+            "Title",
+            "Element ID",
+            "Element Name",
+            "Scale ID",
+            "Scale Name",
+            "Data Value",
+            "N",
+            "Standard Error",
+            "Lower CI Bound",
+            "Upper CI Bound",
+            "Recommend Suppress",
+            "Not Relevant",
+            "Date",
+            "Domain Source"
+          ],
+          "missing_total": 22750,
+          "distinct_occupations": 910
+        },
+        {
+          "file": "Data/raw/onet/transferable_skills_to_work_activities.csv",
+          "format": "csv",
+          "size_bytes": 10025,
+          "rows": 122,
+          "columns": [
+            "Transferable Skills Element ID",
+            "Transferable Skills Element Name",
+            "Work Activities Element ID",
+            "Work Activities Element Name"
+          ],
+          "missing_total": 0,
+          "distinct_occupations": null
+        },
+        {
+          "file": "Data/raw/onet/transferable_skills_to_work_context.csv",
+          "format": "csv",
+          "size_bytes": 4737,
+          "rows": 57,
+          "columns": [
+            "Transferable Skills Element ID",
+            "Transferable Skills Element Name",
+            "Work Context Element ID",
+            "Work Context Element Name"
+          ],
+          "missing_total": 0,
+          "distinct_occupations": null
+        },
+        {
+          "file": "Data/raw/onet/work_activities.csv",
+          "format": "csv",
+          "size_bytes": 11829015,
+          "rows": 74702,
+          "columns": [
+            "O*NET-SOC Code",
+            "Title",
+            "Element ID",
+            "Element Name",
+            "Scale ID",
+            "Scale Name",
+            "Data Value",
+            "N",
+            "Standard Error",
+            "Lower CI Bound",
+            "Upper CI Bound",
+            "Recommend Suppress",
+            "Not Relevant",
+            "Date",
+            "Domain Source"
+          ],
+          "missing_total": 121777,
+          "distinct_occupations": 911
+        },
+        {
+          "file": "Data/raw/onet/work_context.csv",
+          "format": "csv",
+          "size_bytes": 52928020,
+          "rows": 305389,
+          "columns": [
+            "O*NET-SOC Code",
+            "Title",
+            "Element ID",
+            "Element Name",
+            "Scale ID",
+            "Scale Name",
+            "Category",
+            "Data Value",
+            "N",
+            "Standard Error",
+            "Lower CI Bound",
+            "Upper CI Bound",
+            "Recommend Suppress",
+            "Not Relevant",
+            "Date",
+            "Domain Source"
+          ],
+          "missing_total": 781003,
+          "distinct_occupations": 911
+        },
+        {
+          "file": "Data/raw/onet/work_context_categories.csv",
+          "format": "csv",
+          "size_bytes": 30453,
+          "rows": 281,
+          "columns": [
+            "Element ID",
+            "Element Name",
+            "Scale ID",
+            "Scale Name",
+            "Category",
+            "Category Description"
+          ],
+          "missing_total": 0,
+          "distinct_occupations": null
+        },
+        {
+          "file": "Data/raw/onet/work_styles.csv",
+          "format": "csv",
+          "size_bytes": 4329846,
+          "rows": 37422,
+          "columns": [
+            "O*NET-SOC Code",
+            "Title",
+            "Element ID",
+            "Element Name",
+            "Scale ID",
+            "Scale Name",
+            "Data Value",
+            "Date",
+            "Domain Source"
+          ],
+          "missing_total": 0,
+          "distinct_occupations": 891
+        },
+        {
+          "file": "Data/raw/onet/work_styles_to_work_activities.csv",
+          "format": "csv",
+          "size_bytes": 22966,
+          "rows": 303,
+          "columns": [
+            "Work Styles Element ID",
+            "Work Styles Element Name",
+            "Work Activities Element ID",
+            "Work Activities Element Name"
+          ],
+          "missing_total": 0,
+          "distinct_occupations": null
+        },
+        {
+          "file": "Data/raw/onet/work_styles_to_work_context.csv",
+          "format": "csv",
+          "size_bytes": 19770,
+          "rows": 266,
+          "columns": [
+            "Work Styles Element ID",
+            "Work Styles Element Name",
+            "Work Context Element ID",
+            "Work Context Element Name"
+          ],
+          "missing_total": 0,
+          "distinct_occupations": null
+        }
+      ],
+      "identifiers": {
+        "occupation": "O*NET-SOC Code (e.g. 15-2051.00)",
+        "element": "Element ID (content model)",
+        "task": "Task ID",
+        "dwa": "DWA Element ID"
+      },
+      "summary": {
+        "occupations": 1016,
+        "software_skill_rows": 31821,
+        "distinct_software_examples": 8753,
+        "software_categories": 134,
+        "hot_technology_examples": 176
+      },
+      "relationships": {
+        "*.O*NET-SOC Code -> occupation_data.O*NET-SOC Code": "all occupation-level files",
+        "*.Element ID -> content_model_reference.Element ID": "skills/knowledge/abilities/activities",
+        "related_occupations.Related O*NET-SOC Code -> occupation_data": "occupation graph"
+      },
+      "notes": [
+        "Release 31.0 uses new file names: essential_skills.csv and transferable_skills.csv (the former 'Skills' file split), software_skills.csv (former Technology Skills).",
+        "software_skills Element IDs identify technology categories; individual tools (Workplace Example) have no O*NET ID, so the project derives stable IDs 'onet-tech:<slug>'."
+      ],
+      "temporal": "reference taxonomy (2026 release)",
+      "usage": [
+        "primary skill taxonomy",
+        "occupation normalization",
+        "transferable skills",
+        "occupation relations"
+      ],
+      "privacy": "Public reference data."
+    },
+    {
+      "dataset_id": "osmt",
+      "name": "Open Skills Management Tool (OSMT) \u2014 import resources",
+      "source": "Workspace ./osmt-develop/ (WGU OSMT source repository). Only import/ CSVs, README and LICENSE were copied; the repository (incl. 1.2 GB UI sources) is preserved in place.",
+      "location": "Data/raw/osmt",
+      "files": [
+        {
+          "file": "Data/raw/osmt/import/BLS-Import.csv",
+          "format": "csv",
+          "size_bytes": 297729,
+          "rows": 1447,
+          "columns": [
+            "SOC Group",
+            "SOC Code",
+            "SOC Title",
+            "SOC Definition"
+          ]
+        },
+        {
+          "file": "Data/raw/osmt/import/Skills-Import.csv",
+          "format": "csv",
+          "size_bytes": 936,
+          "rows": 2,
+          "columns": [
+            "Collection",
+            "Skill Name",
+            "Skill Category",
+            "Contextualized Skill Statement",
+            "Keywords",
+            "BLS Major Group",
+            "BLS Minor Group",
+            "BLS Broad Occupation",
+            "BLS Detailed Occupation",
+            "O*NET Job Role",
+            "Professional Standards",
+            "Certifications",
+            "Alignment Title",
+            "Alignment"
+          ]
+        },
+        {
+          "file": "Data/raw/osmt/import/oNet-Import.csv",
+          "format": "csv",
+          "size_bytes": 267013,
+          "rows": 1016,
+          "columns": [
+            "O*NET-SOC Code",
+            "Title",
+            "Description"
+          ]
+        },
+        {
+          "file": "Data/raw/osmt/import/osmt-batch-import-example.csv",
+          "format": "csv",
+          "size_bytes": 333,
+          "rows": 0,
+          "columns": [
+            "RSD Name",
+            "Authors",
+            "Skill Statement",
+            "Categories",
+            "Keywords",
+            "Standards",
+            "Certifications",
+            "Occupation Major Groups",
+            "Occupation Minor Groups",
+            "Broad Occupations",
+            "Detailed Occupations",
+            "O*NET Job Codes",
+            "Employers",
+            "Alignment Name",
+            "Alignment URL",
+            "Alignment Framework",
+            "Alignment 2 Name",
+            "Alignment 2 URL",
+            "Alignment 2 Framework"
+          ]
+        }
+      ],
+      "notes": [
+        "OSMT is application source code (Kotlin/Angular), not a dataset. Its import/ folder contains a BLS SOC hierarchy (BLS-Import.csv), an O*NET occupation list identical in structure to occupation_data.csv, a 2-row example Rich Skill Descriptor file, and a batch-import template.",
+        "Used: BLS-Import.csv for SOC major/minor group names; RSD columns inform the Skill node schema."
+      ],
+      "temporal": "reference",
+      "usage": [
+        "SOC hierarchy names",
+        "skill schema reference"
+      ],
+      "privacy": "Public."
+    }
+  ],
+  "cross_source_overlap": {
+    "title_company_key": {
+      "linkedin_kaggle \u2229 datastax_linkedin": 14,
+      "linkedin_kaggle \u2229 linkedin_insights": 58,
+      "linkedin_kaggle \u2229 remoteok": 0,
+      "linkedin_kaggle \u2229 adzuna": 2,
+      "datastax_linkedin \u2229 linkedin_insights": 5,
+      "datastax_linkedin \u2229 remoteok": 0,
+      "datastax_linkedin \u2229 adzuna": 0,
+      "linkedin_insights \u2229 remoteok": 0,
+      "linkedin_insights \u2229 adzuna": 2,
+      "remoteok \u2229 adzuna": 0
+    },
+    "description_hash": {
+      "linkedin_kaggle \u2229 datastax_linkedin": 0,
+      "linkedin_kaggle \u2229 remoteok": 0,
+      "datastax_linkedin \u2229 remoteok": 0
+    },
+    "sizes": {
+      "linkedin_kaggle": {
+        "distinct_title_company": 96400,
+        "distinct_description_hash": 107159
+      },
+      "datastax_linkedin": {
+        "distinct_title_company": 814,
+        "distinct_description_hash": 931
+      },
+      "linkedin_insights": {
+        "distinct_title_company": 10445,
+        "distinct_description_hash": 0
+      },
+      "remoteok": {
+        "distinct_title_company": 99,
+        "distinct_description_hash": 99
+      },
+      "adzuna": {
+        "distinct_title_company": 394,
+        "distinct_description_hash": 0
+      }
+    }
+  }
+}

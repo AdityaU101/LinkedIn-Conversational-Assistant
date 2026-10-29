@@ -1,0 +1,79 @@
+# Model routing. Model IDs change over time — keep them configurable and
+# verify availability with:  python scripts/check_providers.py
+#
+# Each task lists an ordered chain; the router uses the first provider that
+# is configured, reachable and permitted (tasks with pii: true only run on
+# local providers unless privacy.allow_remote_pii is true).
+#
+# Pricing is USD per 1M tokens and is used only to compute cost estimates.
+# Leave null when unknown — cost is then reported as null, not 0.
+
+providers:
+  ollama:
+    type: ollama
+    base_url_env: OLLAMA_BASE_URL
+    default_base_url: http://localhost:11434
+    local: true
+  groq:
+    type: openai_compatible
+    base_url: https://api.groq.com/openai/v1
+    api_key_env: GROQ_API_KEY
+    local: false
+  openrouter:
+    type: openai_compatible
+    base_url: https://openrouter.ai/api/v1
+    api_key_env: OPENROUTER_API_KEY
+    local: false
+  proprietary:
+    # Optional proprietary baseline for RQ1 via any OpenAI-compatible endpoint.
+    type: openai_compatible
+    base_url_env: PROPRIETARY_BASE_URL
+    api_key_env: PROPRIETARY_API_KEY
+    local: false
+
+tasks:
+  parser:
+    pii: true
+    chain:
+      - {provider: ollama, model: "qwen2.5:3b-instruct"}
+  explainer:
+    pii: true   # prompts quote the candidate's resume ([C#] evidence items): local providers only
+    chain:
+      - {provider: ollama, model: "qwen2.5:3b-instruct"}
+      - {provider: groq, model: "llama-3.1-8b-instant"}
+  research:
+    pii: false
+    chain:
+      - {provider: groq, model: "llama-3.1-8b-instant"}
+      - {provider: ollama, model: "qwen2.5:3b-instruct"}
+  optimizer:
+    pii: true
+    chain:
+      - {provider: ollama, model: "qwen2.5:3b-instruct"}
+  spo:
+    pii: false
+    chain:
+      - {provider: ollama, model: "qwen2.5:3b-instruct"}
+  tiebreak:
+    pii: true   # resolves skill mentions taken from resumes
+    chain:
+      - {provider: ollama, model: "qwen2.5:3b-instruct"}
+
+# Provider/model pairs compared in Experiment G (RQ1).
+benchmark:
+  - {provider: ollama, model: "qwen2.5:3b-instruct"}
+  - {provider: groq, model: "llama-3.1-8b-instant"}
+  - {provider: openrouter, model: "meta-llama/llama-3.1-8b-instruct"}
+  - {provider: proprietary, model: "gpt-4o-mini"}
+
+pricing:
+  "ollama/qwen2.5:3b-instruct": {input: 0.0, output: 0.0}
+  "groq/llama-3.1-8b-instant": {input: null, output: null}
+  "openrouter/meta-llama/llama-3.1-8b-instruct": {input: null, output: null}
+  "proprietary/gpt-4o-mini": {input: null, output: null}
+
+generation:
+  temperature: 0.0
+  max_tokens: 1500
+  timeout_s: 120
+  max_retries: 2
